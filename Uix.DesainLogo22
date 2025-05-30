@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uix.Desain</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial Black', sans-serif;
+      background: #0d0d0d;
+      color: white;
+    }
+    header {
+      background-color: #4b0082;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    section {
+      padding: 30px 20px;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .highlight {
+      color: #ff00ff;
+    }
+    .cta-button {
+      background-color: #800080;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+    .cta-button:hover {
+      background-color: #a020f0;
+    }
+    .hidden {
+      display: none;
+    }
+    .offer-box {
+      background-color: #1a1a1a;
+      border: 2px solid #800080;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+    }
+    .price {
+      font-size: 22px;
+      margin: 10px 0;
+    }
+    .discount {
+      color: red;
+      text-decoration: line-through;
+      margin-left: 10px;
+    }
+    .contact {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #bb86fc;
+    }
+    .phone-icon {
+      font-size: 22px;
+      margin-right: 8px;
+    }
+    footer {
+      background-color: #2b0032;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Uix.Desain</h1>
+    <p>Desain Eksklusif untuk Brand Anda</p>
+  </header>
+
+  <section>
+    <p>Logo yang terlalu <span class="highlight">ribet, kaku</span> dan tidak mudah dihafal?</p>
+    <p>Maka anda perlu yang <span class="highlight">sederhana, simpel, dan mudah diingat</span>.</p>
+    <p>Ketika anda membuat suatu brand, baru saja dibuat tapi langsung gagal, padahal sudah keluar modal besar hanya untuk logo.</p>
+    <p>Kami hadir spesial untuk anda — <strong>Mau logo berkelas tapi dibayar murah?</strong> Kami <span class="highlight">ready!</span></p>
+
+    <button class="cta-button" onclick="toggleLangganan()">Click Tanda di Bawah untuk Kejutannya</button>
+
+    <div id="langganan" class="hidden">
+      <div class="offer-box">
+        <h3>Terjamin tapi Terjangkau</h3>
+        <p class="price">Rp 20.000 <span class="discount">Rp 100.000</span></p>
+        <p>Pilih 10 logo yang sesuai dengan brand anda</p>
+        <p class="contact"><span class="phone-icon">📞</span>Chat Layanan kami!<br>0858-2803-4966</p>
+      </div>
+
+      <div class="offer-box">
+        <h3>Penawaran Spesial</h3>
+        <p class="price">Rp 50.000 <span class="discount">Rp 500.000</span></p>
+        <p>Pilih 20 logo terbaik sesuai brand anda</p>
+        <p class="contact"><span class="phone-icon">📞</span>Chat Layanan kami!<br>0858-2803-4966</p>
+      </div>
+
+      <div class="offer-box">
+        <h3>GRATIS UJI COBA</h3>
+        <p>Pilih 1 logo untuk test sebelum membeli!</p>
+        <p class="contact"><span class="phone-icon">📞</span>Chat Layanan kami!<br>0858-2803-4966</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Uix.Desain | Simpel. Berkelas. Terjangkau.
+  </footer>
+
+  <script>
+    function toggleLangganan() {
+      const section = document.getElementById("langganan");
+      section.classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>
